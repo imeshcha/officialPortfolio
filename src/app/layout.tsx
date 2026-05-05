@@ -25,7 +25,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Minimal & Creamy",
+  title: "IMESH CHATHURA",
   description: "A minimal and creamy personal portfolio showcasing my work, education, and skills.",
 };
 

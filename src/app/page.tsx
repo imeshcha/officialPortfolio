@@ -559,12 +559,9 @@ export default function Home() {
         </div>
 
         {/* Bottom Content: Massive Name */}
-        <div className="reveal" style={{ zIndex: 1, textAlign: 'right', transitionDelay: '0.3s' }}>
-          <h1 style={{
-            fontSize: 'min(24vw, 20rem)',
+        <div className="reveal hero-name-container" style={{ zIndex: 1, transitionDelay: '0.3s' }}>
+          <h1 className="hero-title" style={{
             fontWeight: '900',
-            letterSpacing: '-0.07em',
-            lineHeight: '0.75',
             color: 'var(--text-main)',
             margin: 0,
             textTransform: 'uppercase',
@@ -790,7 +787,7 @@ export default function Home() {
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
                   In-depth mastery of blockchain development and decentralized application architecture.
                 </p>
-                <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI4OTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC90aHVtYl80NTQyMDU1XzE2OTU4NzA1MzkucG5nIiwidXNlcm5hbWUiOiJJbWVzaCBDaGF0aHVyYSBLdW1hcmEifQ%3D%3D&referrer=https%3A%2F%2Flms.simplilearn.com%2Fdashboard%2Fcertificate&%24web_only=true" target="_blank" rel="noopener noreferrer" className="btn" style={{ fontSize: '0.8rem', padding: '0.8rem 1.5rem', marginTop: 'auto', alignSelf: 'flex-start' }}>
+                <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI4OTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC90aHVtYl80NTQyMDU1XzE2OTU4NzA1MzkucG5nIiwidXNlcm5hbWUiOiJJbWVzaCBDaGF0aHVyYSBLdW1hcmEifQ%3D%3D&referrer=https%3A%2F%2Flms.simplilearn.com%2Fdashboard%2Fcertificate&%24web_only=true" target="_blank" rel="noopener noreferrer" className="btn project-btn">
                   View certificate
                 </a>
               </div>
@@ -817,7 +814,7 @@ export default function Home() {
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
                   This equips me with practical skills in smart contract development, dApp creation, and ecosystem integration on BNBChain.
                 </p>
-                <a href="https://www.binance.com/en/academy/courses/certificate/df9cdd766e3801f51bb773d9a14f6d68c963f44ec217497b15bbbff060396957" target="_blank" rel="noopener noreferrer" className="btn" style={{ fontSize: '0.8rem', padding: '0.8rem 1.5rem', marginTop: 'auto', alignSelf: 'flex-start' }}>
+                <a href="https://www.binance.com/en/academy/courses/certificate/df9cdd766e3801f51bb773d9a14f6d68c963f44ec217497b15bbbff060396957" target="_blank" rel="noopener noreferrer" className="btn project-btn">
                   View certificate
                 </a>
               </div>
@@ -844,7 +841,7 @@ export default function Home() {
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
                   Expertise in Responsive and Modern Front-End Development.
                 </p>
-                <a href="https://www.freecodecamp.org/certification/s_a_imesh_chathura_kumara/responsive-web-design" target="_blank" rel="noopener noreferrer" className="btn" style={{ fontSize: '0.8rem', padding: '0.8rem 1.5rem', marginTop: 'auto', alignSelf: 'flex-start' }}>
+                <a href="https://www.freecodecamp.org/certification/s_a_imesh_chathura_kumara/responsive-web-design" target="_blank" rel="noopener noreferrer" className="btn project-btn">
                   View certificate
                 </a>
               </div>
@@ -871,7 +868,7 @@ export default function Home() {
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
                   This program gave me a strong foundation in blockchain technology and its applications, including cryptography, consensus algorithms, and smart contracts.
                 </p>
-                <a href="https://www.bitget.com/promotion/blockchain4youth/completion" target="_blank" rel="noopener noreferrer" className="btn" style={{ fontSize: '0.8rem', padding: '0.8rem 1.5rem', marginTop: 'auto', alignSelf: 'flex-start' }}>
+                <a href="https://www.bitget.com/promotion/blockchain4youth/completion" target="_blank" rel="noopener noreferrer" className="btn project-btn">
                   View certificate
                 </a>
               </div>
@@ -1188,7 +1185,7 @@ export default function Home() {
                       <span className="skill-tag" style={{ fontSize: '0.7rem', padding: '0.3rem 0.8rem' }}>Gemini API</span>
                       <span className="skill-tag" style={{ fontSize: '0.7rem', padding: '0.3rem 0.8rem' }}>Next.js</span>
                     </div>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="btn" style={{ marginTop: '2rem', alignSelf: 'flex-start', fontSize: '0.9rem' }}>Github</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="btn project-btn" style={{ marginTop: '2rem', fontSize: '0.9rem' }}>Github</a>
                   </div>
                 </SpotlightCard>
 
@@ -1214,8 +1211,8 @@ export default function Home() {
                     </div>
                     <button
                       onClick={() => setExternalVideoLink("https://x.com/imesh_chathura/status/2003020875965329459/video/1")}
-                      className="btn"
-                      style={{ marginTop: '2rem', alignSelf: 'flex-start', fontSize: '0.9rem', border: 'none' }}
+                      className="btn project-btn"
+                      style={{ marginTop: '2rem', fontSize: '0.9rem', border: 'none' }}
                     >
                       Watch Animation
                     </button>
@@ -1239,8 +1236,8 @@ export default function Home() {
                     </div>
                     <button
                       onClick={() => setExternalVideoLink("https://mega.nz/file/hvwm1IaI#f8Zr-9_naAF1ePGMRUH48yFTh10uEZt44Lyfoptzx38")}
-                      className="btn"
-                      style={{ marginTop: '2rem', alignSelf: 'flex-start', fontSize: '0.9rem', border: 'none' }}
+                      className="btn project-btn"
+                      style={{ marginTop: '2rem', fontSize: '0.9rem', border: 'none' }}
                     >
                       View Animation
                     </button>
@@ -1264,7 +1261,7 @@ export default function Home() {
 
           <div className="contact-container" style={{ display: 'flex', gap: '6rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
             {/* Left Side: Form */}
-            <div className="reveal" style={{
+            <div className="reveal contact-form-card" style={{
               flex: '1 1 500px',
               transitionDelay: '0.2s',
               background: theme === 'dark' ? 'rgba(255, 255, 255, 0.03)' : 'rgba(255, 255, 255, 0.6)',
@@ -1272,7 +1269,8 @@ export default function Home() {
               border: '1px solid rgba(255, 255, 255, 0.1)',
               padding: '3rem',
               borderRadius: '40px',
-              boxShadow: theme === 'dark' ? '0 20px 50px rgba(0,0,0,0.3)' : '0 20px 50px rgba(0,0,0,0.05)'
+              boxShadow: theme === 'dark' ? '0 20px 50px rgba(0,0,0,0.3)' : '0 20px 50px rgba(0,0,0,0.05)',
+              minWidth: '0'
             }}>
               <form ref={formRef} onSubmit={sendEmail} className="contact-form" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <input type="hidden" name="from_name" value="Portfolio Contact" />
@@ -1310,7 +1308,7 @@ export default function Home() {
             </div>
 
             {/* Right Side: Info & Socials */}
-            <div className="reveal" style={{ flex: '1 1 400px', transitionDelay: '0.4s' }}>
+            <div className="reveal contact-info-card" style={{ flex: '1 1 400px', transitionDelay: '0.4s', minWidth: '0' }}>
               <div style={{ marginBottom: '3rem' }}>
                 <h3 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--text-main)', fontWeight: '900', lineHeight: '1.1', letterSpacing: '-0.03em' }}>
                   Let's create something extraordinary together.
