@@ -477,7 +477,7 @@ p {
 }
 
 .hero-title {
-  font-size: min(15vw, 40rem) !important;
+  font-size: min(15vw, 50rem) !important;
   letter-spacing: -0.07em;
   line-height: 0.75;
 }
