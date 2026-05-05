@@ -15,9 +15,12 @@
 [data-theme="dark"] {
   --cream-bg: #0a0a0a;
   --cream-surface: #121212;
-  --text-main: #cccccc; /* Increased from 888888 */
-  --text-muted: #888888; /* Increased from 555555 */
-  --accent: #8e8377; /* Slightly brighter accent */
+  --text-main: #cccccc;
+  /* Increased from 888888 */
+  --text-muted: #888888;
+  /* Increased from 555555 */
+  --accent: #8e8377;
+  /* Slightly brighter accent */
   --card-bg: #141414;
   --about-bg: #000000;
   --education-bg: #0d0d0d;
@@ -29,16 +32,17 @@
 
 [data-theme="dark"] .card {
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 [data-theme="dark"] .card:hover {
   border-color: #666666;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
 [data-theme="dark"] .btn {
-  background: #333333; /* Brighter than 222222 */
+  background: #333333;
+  /* Brighter than 222222 */
   color: #cccccc;
   border: 1px solid #444444;
 }
@@ -67,7 +71,12 @@ html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-weight: 500;
   user-select: none;
@@ -98,6 +107,7 @@ p {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -108,9 +118,11 @@ p {
   0% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(2%, 3%) scale(1.05);
   }
+
   100% {
     transform: translate(-1%, -2%) scale(0.98);
   }
@@ -120,9 +132,11 @@ p {
   0% {
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
   }
@@ -132,6 +146,7 @@ p {
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(-50%);
   }
@@ -146,13 +161,25 @@ p {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--accent) }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--accent)
+  }
 }
 
 /* Glitch Effect */
@@ -186,60 +213,249 @@ p {
 }
 
 @keyframes glitch-anim {
-  0% { clip: rect(31px, 9999px, 94px, 0); transform: skew(0.85deg); }
-  5% { clip: rect(70px, 9999px, 71px, 0); transform: skew(0.24deg); }
-  10% { clip: rect(13px, 9999px, 11px, 0); transform: skew(0.76deg); }
-  15% { clip: rect(75px, 9999px, 99px, 0); transform: skew(0.47deg); }
-  20% { clip: rect(61px, 9999px, 67px, 0); transform: skew(0.39deg); }
-  25% { clip: rect(100px, 9999px, 95px, 0); transform: skew(0.02deg); }
-  30% { clip: rect(48px, 9999px, 43px, 0); transform: skew(0.86deg); }
-  35% { clip: rect(36px, 9999px, 47px, 0); transform: skew(0.2deg); }
-  40% { clip: rect(34px, 9999px, 86px, 0); transform: skew(0.84deg); }
-  45% { clip: rect(6px, 9999px, 7px, 0); transform: skew(0.55deg); }
-  50% { clip: rect(87px, 9999px, 97px, 0); transform: skew(0.87deg); }
-  55% { clip: rect(56px, 9999px, 2px, 0); transform: skew(0.19deg); }
-  60% { clip: rect(51px, 9999px, 82px, 0); transform: skew(0.21deg); }
-  65% { clip: rect(2px, 9999px, 34px, 0); transform: skew(0.04deg); }
-  70% { clip: rect(98px, 9999px, 42px, 0); transform: skew(0.28deg); }
-  75% { clip: rect(47px, 9999px, 83px, 0); transform: skew(0.56deg); }
-  80% { clip: rect(2px, 9999px, 60px, 0); transform: skew(0.44deg); }
-  85% { clip: rect(44px, 9999px, 86px, 0); transform: skew(0.68deg); }
-  90% { clip: rect(95px, 9999px, 81px, 0); transform: skew(0.02deg); }
-  95% { clip: rect(30px, 9999px, 12px, 0); transform: skew(0.12deg); }
-  100% { clip: rect(42px, 9999px, 65px, 0); transform: skew(0.97deg); }
+  0% {
+    clip: rect(31px, 9999px, 94px, 0);
+    transform: skew(0.85deg);
+  }
+
+  5% {
+    clip: rect(70px, 9999px, 71px, 0);
+    transform: skew(0.24deg);
+  }
+
+  10% {
+    clip: rect(13px, 9999px, 11px, 0);
+    transform: skew(0.76deg);
+  }
+
+  15% {
+    clip: rect(75px, 9999px, 99px, 0);
+    transform: skew(0.47deg);
+  }
+
+  20% {
+    clip: rect(61px, 9999px, 67px, 0);
+    transform: skew(0.39deg);
+  }
+
+  25% {
+    clip: rect(100px, 9999px, 95px, 0);
+    transform: skew(0.02deg);
+  }
+
+  30% {
+    clip: rect(48px, 9999px, 43px, 0);
+    transform: skew(0.86deg);
+  }
+
+  35% {
+    clip: rect(36px, 9999px, 47px, 0);
+    transform: skew(0.2deg);
+  }
+
+  40% {
+    clip: rect(34px, 9999px, 86px, 0);
+    transform: skew(0.84deg);
+  }
+
+  45% {
+    clip: rect(6px, 9999px, 7px, 0);
+    transform: skew(0.55deg);
+  }
+
+  50% {
+    clip: rect(87px, 9999px, 97px, 0);
+    transform: skew(0.87deg);
+  }
+
+  55% {
+    clip: rect(56px, 9999px, 2px, 0);
+    transform: skew(0.19deg);
+  }
+
+  60% {
+    clip: rect(51px, 9999px, 82px, 0);
+    transform: skew(0.21deg);
+  }
+
+  65% {
+    clip: rect(2px, 9999px, 34px, 0);
+    transform: skew(0.04deg);
+  }
+
+  70% {
+    clip: rect(98px, 9999px, 42px, 0);
+    transform: skew(0.28deg);
+  }
+
+  75% {
+    clip: rect(47px, 9999px, 83px, 0);
+    transform: skew(0.56deg);
+  }
+
+  80% {
+    clip: rect(2px, 9999px, 60px, 0);
+    transform: skew(0.44deg);
+  }
+
+  85% {
+    clip: rect(44px, 9999px, 86px, 0);
+    transform: skew(0.68deg);
+  }
+
+  90% {
+    clip: rect(95px, 9999px, 81px, 0);
+    transform: skew(0.02deg);
+  }
+
+  95% {
+    clip: rect(30px, 9999px, 12px, 0);
+    transform: skew(0.12deg);
+  }
+
+  100% {
+    clip: rect(42px, 9999px, 65px, 0);
+    transform: skew(0.97deg);
+  }
 }
 
 @keyframes glitch-anim2 {
-  0% { clip: rect(65px, 9999px, 100px, 0); transform: skew(0.87deg); }
-  5% { clip: rect(54px, 9999px, 35px, 0); transform: skew(0.5deg); }
-  10% { clip: rect(96px, 9999px, 85px, 0); transform: skew(0.25deg); }
-  15% { clip: rect(38px, 9999px, 88px, 0); transform: skew(0.3deg); }
-  20% { clip: rect(40px, 9999px, 81px, 0); transform: skew(0.1deg); }
-  25% { clip: rect(89px, 9999px, 30px, 0); transform: skew(0.96deg); }
-  30% { clip: rect(55px, 9999px, 5px, 0); transform: skew(0.96deg); }
-  35% { clip: rect(42px, 9999px, 80px, 0); transform: skew(0.48deg); }
-  40% { clip: rect(100px, 9999px, 12px, 0); transform: skew(0.84deg); }
-  45% { clip: rect(96px, 9999px, 64px, 0); transform: skew(0.2deg); }
-  50% { clip: rect(78px, 9999px, 30px, 0); transform: skew(0.72deg); }
-  55% { clip: rect(6px, 9999px, 87px, 0); transform: skew(0.14deg); }
-  60% { clip: rect(64px, 9999px, 45px, 0); transform: skew(0.04deg); }
-  65% { clip: rect(12px, 9999px, 33px, 0); transform: skew(0.39deg); }
-  70% { clip: rect(36px, 9999px, 84px, 0); transform: skew(0.08deg); }
-  75% { clip: rect(55px, 9999px, 43px, 0); transform: skew(0.98deg); }
-  80% { clip: rect(4px, 9999px, 66px, 0); transform: skew(0.66deg); }
-  85% { clip: rect(13px, 9999px, 20px, 0); transform: skew(0.41deg); }
-  90% { clip: rect(32px, 9999px, 96px, 0); transform: skew(0.86deg); }
-  95% { clip: rect(59px, 9999px, 97px, 0); transform: skew(0.96deg); }
-  100% { clip: rect(81px, 9999px, 80px, 0); transform: skew(0.37deg); }
+  0% {
+    clip: rect(65px, 9999px, 100px, 0);
+    transform: skew(0.87deg);
+  }
+
+  5% {
+    clip: rect(54px, 9999px, 35px, 0);
+    transform: skew(0.5deg);
+  }
+
+  10% {
+    clip: rect(96px, 9999px, 85px, 0);
+    transform: skew(0.25deg);
+  }
+
+  15% {
+    clip: rect(38px, 9999px, 88px, 0);
+    transform: skew(0.3deg);
+  }
+
+  20% {
+    clip: rect(40px, 9999px, 81px, 0);
+    transform: skew(0.1deg);
+  }
+
+  25% {
+    clip: rect(89px, 9999px, 30px, 0);
+    transform: skew(0.96deg);
+  }
+
+  30% {
+    clip: rect(55px, 9999px, 5px, 0);
+    transform: skew(0.96deg);
+  }
+
+  35% {
+    clip: rect(42px, 9999px, 80px, 0);
+    transform: skew(0.48deg);
+  }
+
+  40% {
+    clip: rect(100px, 9999px, 12px, 0);
+    transform: skew(0.84deg);
+  }
+
+  45% {
+    clip: rect(96px, 9999px, 64px, 0);
+    transform: skew(0.2deg);
+  }
+
+  50% {
+    clip: rect(78px, 9999px, 30px, 0);
+    transform: skew(0.72deg);
+  }
+
+  55% {
+    clip: rect(6px, 9999px, 87px, 0);
+    transform: skew(0.14deg);
+  }
+
+  60% {
+    clip: rect(64px, 9999px, 45px, 0);
+    transform: skew(0.04deg);
+  }
+
+  65% {
+    clip: rect(12px, 9999px, 33px, 0);
+    transform: skew(0.39deg);
+  }
+
+  70% {
+    clip: rect(36px, 9999px, 84px, 0);
+    transform: skew(0.08deg);
+  }
+
+  75% {
+    clip: rect(55px, 9999px, 43px, 0);
+    transform: skew(0.98deg);
+  }
+
+  80% {
+    clip: rect(4px, 9999px, 66px, 0);
+    transform: skew(0.66deg);
+  }
+
+  85% {
+    clip: rect(13px, 9999px, 20px, 0);
+    transform: skew(0.41deg);
+  }
+
+  90% {
+    clip: rect(32px, 9999px, 96px, 0);
+    transform: skew(0.86deg);
+  }
+
+  95% {
+    clip: rect(59px, 9999px, 97px, 0);
+    transform: skew(0.96deg);
+  }
+
+  100% {
+    clip: rect(81px, 9999px, 80px, 0);
+    transform: skew(0.37deg);
+  }
 }
 
 @keyframes glitch-image {
-  0% { transform: translate(0); filter: grayscale(100%) contrast(150%); }
-  20% { transform: translate(-2px, 2px); filter: grayscale(100%) contrast(200%) hue-rotate(90deg); }
-  40% { transform: translate(-2px, -2px); filter: grayscale(100%) contrast(150%); }
-  60% { transform: translate(2px, 2px); filter: grayscale(100%) contrast(300%) invert(10%); }
-  80% { transform: translate(2px, -2px); filter: grayscale(100%) contrast(150%); }
-  100% { transform: translate(0); filter: grayscale(100%) contrast(150%); }
+  0% {
+    transform: translate(0);
+    filter: grayscale(100%) contrast(150%);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+    filter: grayscale(100%) contrast(200%) hue-rotate(90deg);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+    filter: grayscale(100%) contrast(150%);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+    filter: grayscale(100%) contrast(300%) invert(10%);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+    filter: grayscale(100%) contrast(150%);
+  }
+
+  100% {
+    transform: translate(0);
+    filter: grayscale(100%) contrast(150%);
+  }
 }
 
 .section-title {
@@ -261,7 +477,7 @@ p {
 }
 
 .hero-title {
-  font-size: min(24vw, 20rem);
+  font-size: min(15vw, 40rem) !important;
   letter-spacing: -0.07em;
   line-height: 0.75;
 }
@@ -275,7 +491,7 @@ p {
     padding: 0 !important;
     letter-spacing: -0.04em !important;
   }
-  
+
   .section-title {
     font-size: 1.8rem !important;
     margin-bottom: 2rem !important;
@@ -291,6 +507,8 @@ p {
 
 .hero-name-container {
   text-align: right;
+  width: 100%;
+  align-self: flex-end;
 }
 
 .project-btn {
@@ -407,13 +625,13 @@ p {
   background: var(--card-bg);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .btn {
@@ -562,7 +780,8 @@ p {
 :root {
   --font-size-base: clamp(1rem, 0.5vw + 0.8rem, 1.1rem);
   --font-size-h1: clamp(3rem, 18vw, 15rem);
-  --font-size-h2: clamp(1.25rem, 2.5vw, 1.8rem); /* Reduced for a more minimal look */
+  --font-size-h2: clamp(1.25rem, 2.5vw, 1.8rem);
+  /* Reduced for a more minimal look */
 }
 
 body {
@@ -574,7 +793,9 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -586,23 +807,20 @@ body {
     gap: 4rem;
   }
 
-  .hero-title {
-    font-size: clamp(2rem, 11vw, 5rem) !important;
-    line-height: 0.9 !important;
-    text-align: right !important;
-  }
-  
-  .hero-sidebar { display: none !important; }
 
-  .section { 
+  .hero-sidebar {
+    display: none !important;
+  }
+
+  .section {
     height: auto !important;
     min-height: 100vh !important;
     padding: 100px 5% !important;
     overflow: visible !important;
   }
 
-  .grid { 
-    grid-template-columns: 1fr !important; 
+  .grid {
+    grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
 
@@ -611,7 +829,9 @@ body {
     padding: 0.8rem 1.5rem !important;
   }
 
-  .nav-links-container { display: none !important; }
+  .nav-links-container {
+    display: none !important;
+  }
 
   .mobile-menu-btn {
     display: flex !important;
@@ -619,12 +839,13 @@ body {
     justify-content: center;
   }
 
-  .about-content, .contact-container {
+  .about-content,
+  .contact-container {
     flex-direction: column !important;
     gap: 3rem !important;
   }
 
-  .contact-container > div {
+  .contact-container>div {
     flex: 1 1 100% !important;
     width: 100% !important;
     min-width: 0 !important;
@@ -634,12 +855,12 @@ body {
     padding: 2rem !important;
   }
 
-  .contact-form > div {
+  .contact-form>div {
     flex-direction: column !important;
     gap: 1.5rem !important;
   }
 
-  .contact-form > div > input {
+  .contact-form>div>input {
     flex: 1 1 100% !important;
     width: 100% !important;
   }

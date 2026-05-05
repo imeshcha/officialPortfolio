@@ -151,6 +151,7 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [projectCategory, setProjectCategory] = useState<'it' | 'creative'>('it');
+  const [certCategory, setCertCategory] = useState<'certificates' | 'badges'>('certificates');
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -760,119 +761,204 @@ export default function Home() {
           } as React.CSSProperties}>
             <span className="glitch" data-text="Certifications">Certifications</span>
           </h2>
-          <div className="grid" style={{
-            gridTemplateColumns: 'repeat(4, 1fr)',
+
+          {/* Certification Toggle */}
+          <div className="reveal" style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '0.75rem',
+            marginBottom: '4rem'
+          }}>
+            <button
+              onClick={() => setCertCategory('certificates')}
+              className="btn"
+              style={{
+                backgroundColor: certCategory === 'certificates' ? 'var(--text-main)' : 'transparent',
+                color: certCategory === 'certificates' ? 'var(--cream-bg)' : 'var(--text-main)',
+                border: '1px solid var(--text-main)',
+                padding: '0.8rem 2rem'
+              }}
+            >
+              Certificates
+            </button>
+            <button
+              onClick={() => setCertCategory('badges')}
+              className="btn"
+              style={{
+                backgroundColor: certCategory === 'badges' ? 'var(--text-main)' : 'transparent',
+                color: certCategory === 'badges' ? 'var(--cream-bg)' : 'var(--text-main)',
+                border: '1px solid var(--text-main)',
+                padding: '0.8rem 2rem'
+              }}
+            >
+              Badges
+            </button>
+          </div>
+
+          <div key={certCategory} className="grid animate-fade-in" style={{
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             gap: '1.5rem',
             display: 'grid'
           }}>
 
-            <SpotlightCard className="card reveal" delay="0.1s">
-              <div
-                className="card-image"
-                style={{ cursor: 'zoom-in' }}
-                onClick={() => setSelectedCert("/certificates/cert01.png")}
-              >
-                <img src="/certificates/cert01.png" alt="Simplilearn Certified Blockchain Developer" />
-              </div>
-              <div className="card-content">
-                <span style={{ color: 'var(--accent)', fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                  Blockchain Development
-                </span>
-                <h3 style={{ fontSize: '1.25rem', marginTop: '1rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
-                  Certified Blockchain Developer
-                </h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: '500', marginBottom: '1rem' }}>
-                  Simplilearn Academy
-                </p>
-                <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
-                  In-depth mastery of blockchain development and decentralized application architecture.
-                </p>
-                <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI4OTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC90aHVtYl80NTQyMDU1XzE2OTU4NzA1MzkucG5nIiwidXNlcm5hbWUiOiJJbWVzaCBDaGF0aHVyYSBLdW1hcmEifQ%3D%3D&referrer=https%3A%2F%2Flms.simplilearn.com%2Fdashboard%2Fcertificate&%24web_only=true" target="_blank" rel="noopener noreferrer" className="btn project-btn">
-                  View certificate
-                </a>
-              </div>
-            </SpotlightCard>
+            {certCategory === 'certificates' ? (
+              <>
+                <SpotlightCard className="card reveal" delay="0.1s">
+                  <div
+                    className="card-image"
+                    style={{ cursor: 'zoom-in' }}
+                    onClick={() => setSelectedCert("/certificates/cert01.png")}
+                  >
+                    <img src="/certificates/cert01.png" alt="Simplilearn Certified Blockchain Developer" />
+                  </div>
+                  <div className="card-content">
+                    <span style={{ color: 'var(--accent)', fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                      Blockchain Development
+                    </span>
+                    <h3 style={{ fontSize: '1.25rem', marginTop: '1rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
+                      Certified Blockchain Developer
+                    </h3>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: '500', marginBottom: '1rem' }}>
+                      Simplilearn Academy
+                    </p>
+                    <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
+                      In-depth mastery of blockchain development and decentralized application architecture.
+                    </p>
+                    <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI4OTgiLCJjZXJ0aWZpY2F0ZV91cmwiOiJodHRwczpcL1wvY2VydGlmaWNhdGVzLnNpbXBsaWNkbi5uZXRcL3NoYXJlXC90aHVtYl80NTQyMDU1XzE2OTU4NzA1MzkucG5nIiwidXNlcm5hbWUiOiJJbWVzaCBDaGF0aHVyYSBLdW1hcmEifQ%3D%3D&referrer=https%3A%2F%2Flms.simplilearn.com%2Fdashboard%2Fcertificate&%24web_only=true" target="_blank" rel="noopener noreferrer" className="btn project-btn">
+                      View certificate
+                    </a>
+                  </div>
+                </SpotlightCard>
 
-            <SpotlightCard className="card reveal" delay="0.2s">
-              <div
-                className="card-image"
-                style={{ cursor: 'zoom-in' }}
-                onClick={() => setSelectedCert("/certificates/cert02.png")}
-              >
-                <img src="/certificates/cert02.png" alt="Binance BNB Chain Developer Specialization" />
-              </div>
-              <div className="card-content">
-                <span style={{ color: 'var(--accent)', fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                  Blockchain Development
-                </span>
-                <h3 style={{ fontSize: '1.25rem', marginTop: '1rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
-                  BNB Chain Developer Specialization
-                </h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: '500', marginBottom: '1rem' }}>
-                  Binance Academy
-                </p>
-                <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
-                  This equips me with practical skills in smart contract development, dApp creation, and ecosystem integration on BNBChain.
-                </p>
-                <a href="https://www.binance.com/en/academy/courses/certificate/df9cdd766e3801f51bb773d9a14f6d68c963f44ec217497b15bbbff060396957" target="_blank" rel="noopener noreferrer" className="btn project-btn">
-                  View certificate
-                </a>
-              </div>
-            </SpotlightCard>
+                <SpotlightCard className="card reveal" delay="0.2s">
+                  <div
+                    className="card-image"
+                    style={{ cursor: 'zoom-in' }}
+                    onClick={() => setSelectedCert("/certificates/cert02.png")}
+                  >
+                    <img src="/certificates/cert02.png" alt="Binance BNB Chain Developer Specialization" />
+                  </div>
+                  <div className="card-content">
+                    <span style={{ color: 'var(--accent)', fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                      Blockchain Development
+                    </span>
+                    <h3 style={{ fontSize: '1.25rem', marginTop: '1rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
+                      BNB Chain Developer Specialization
+                    </h3>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: '500', marginBottom: '1rem' }}>
+                      Binance Academy
+                    </p>
+                    <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
+                      This equips me with practical skills in smart contract development, dApp creation, and ecosystem integration on BNBChain.
+                    </p>
+                    <a href="https://www.binance.com/en/academy/courses/certificate/df9cdd766e3801f51bb773d9a14f6d68c963f44ec217497b15bbbff060396957" target="_blank" rel="noopener noreferrer" className="btn project-btn">
+                      View certificate
+                    </a>
+                  </div>
+                </SpotlightCard>
 
-            <SpotlightCard className="card reveal" delay="0.3s">
-              <div
-                className="card-image"
-                style={{ cursor: 'zoom-in' }}
-                onClick={() => setSelectedCert("/certificates/cert03.png")}
-              >
-                <img src="/certificates/cert03.png" alt="FreeCodeCamp Responsive Web Design" />
-              </div>
-              <div className="card-content">
-                <span style={{ color: 'var(--accent)', fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                  Front-End Development
-                </span>
-                <h3 style={{ fontSize: '1.25rem', marginTop: '1rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
-                  Responsive Web Design
-                </h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: '500', marginBottom: '1rem' }}>
-                  FreeCodeCamp
-                </p>
-                <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
-                  Expertise in Responsive and Modern Front-End Development.
-                </p>
-                <a href="https://www.freecodecamp.org/certification/s_a_imesh_chathura_kumara/responsive-web-design" target="_blank" rel="noopener noreferrer" className="btn project-btn">
-                  View certificate
-                </a>
-              </div>
-            </SpotlightCard>
+                <SpotlightCard className="card reveal" delay="0.3s">
+                  <div
+                    className="card-image"
+                    style={{ cursor: 'zoom-in' }}
+                    onClick={() => setSelectedCert("/certificates/cert03.png")}
+                  >
+                    <img src="/certificates/cert03.png" alt="FreeCodeCamp Responsive Web Design" />
+                  </div>
+                  <div className="card-content">
+                    <span style={{ color: 'var(--accent)', fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                      Front-End Development
+                    </span>
+                    <h3 style={{ fontSize: '1.25rem', marginTop: '1rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
+                      Responsive Web Design
+                    </h3>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: '500', marginBottom: '1rem' }}>
+                      FreeCodeCamp
+                    </p>
+                    <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
+                      Expertise in Responsive and Modern Front-End Development.
+                    </p>
+                    <a href="https://www.freecodecamp.org/certification/s_a_imesh_chathura_kumara/responsive-web-design" target="_blank" rel="noopener noreferrer" className="btn project-btn">
+                      View certificate
+                    </a>
+                  </div>
+                </SpotlightCard>
 
-            <SpotlightCard className="card reveal" delay="0.4s">
-              <div
-                className="card-image"
-                style={{ cursor: 'zoom-in' }}
-                onClick={() => setSelectedCert("/certificates/cert04.jpg")}
-              >
-                <img src="/certificates/cert04.jpg" alt="Bitget Blockchain and Web3 Essentials" />
-              </div>
-              <div className="card-content">
-                <span style={{ color: 'var(--accent)', fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                  Blockchain Development
-                </span>
-                <h3 style={{ fontSize: '1.25rem', marginTop: '1rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
-                  Blockchain and Web3 Essentials
-                </h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: '500', marginBottom: '1rem' }}>
-                  Blockchain4Youth | Bitget
-                </p>
-                <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
-                  This program gave me a strong foundation in blockchain technology and its applications, including cryptography, consensus algorithms, and smart contracts.
-                </p>
-                <a href="https://www.bitget.com/promotion/blockchain4youth/completion" target="_blank" rel="noopener noreferrer" className="btn project-btn">
-                  View certificate
-                </a>
-              </div>
-            </SpotlightCard>
+                <SpotlightCard className="card reveal" delay="0.4s">
+                  <div
+                    className="card-image"
+                    style={{ cursor: 'zoom-in' }}
+                    onClick={() => setSelectedCert("/certificates/cert04.jpg")}
+                  >
+                    <img src="/certificates/cert04.jpg" alt="Bitget Blockchain and Web3 Essentials" />
+                  </div>
+                  <div className="card-content">
+                    <span style={{ color: 'var(--accent)', fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                      Blockchain Development
+                    </span>
+                    <h3 style={{ fontSize: '1.25rem', marginTop: '1rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
+                      Blockchain and Web3 Essentials
+                    </h3>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: '500', marginBottom: '1rem' }}>
+                      Blockchain4Youth | Bitget
+                    </p>
+                    <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
+                      This program gave me a strong foundation in blockchain technology and its applications, including cryptography, consensus algorithms, and smart contracts.
+                    </p>
+                    <a href="https://www.bitget.com/promotion/blockchain4youth/completion" target="_blank" rel="noopener noreferrer" className="btn project-btn">
+                      View certificate
+                    </a>
+                  </div>
+                </SpotlightCard>
+              </>
+            ) : (
+              <>
+                {/* Placeholder Badges */}
+                <SpotlightCard className="card reveal" delay="0.1s">
+                  <div className="card-image" style={{ padding: '2rem', display: 'flex', justifyContent: 'center' }}>
+                    <img src="/badges/solidity.png" alt="Solidity Badge" style={{ width: '120px', height: '120px', objectFit: 'contain' }} />
+                  </div>
+                  <div className="card-content" style={{ textAlign: 'center' }}>
+                    <span style={{ color: 'var(--accent)', fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Blockchain</span>
+                    <h3 style={{ fontSize: '1.2rem', marginTop: '0.5rem' }}>Smart Contract Master</h3>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Verified proficiency in Solidity and Smart Contract security.</p>
+                  </div>
+                </SpotlightCard>
+
+                <SpotlightCard className="card reveal" delay="0.2s">
+                  <div className="card-image" style={{ padding: '2rem', display: 'flex', justifyContent: 'center' }}>
+                    <img src="/badges/react.png" alt="React Badge" style={{ width: '120px', height: '120px', objectFit: 'contain' }} />
+                  </div>
+                  <div className="card-content" style={{ textAlign: 'center' }}>
+                    <span style={{ color: 'var(--accent)', fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Frontend</span>
+                    <h3 style={{ fontSize: '1.2rem', marginTop: '0.5rem' }}>Advanced React Developer</h3>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Mastery of React hooks, context, and performance optimization.</p>
+                  </div>
+                </SpotlightCard>
+
+                <SpotlightCard className="card reveal" delay="0.3s">
+                  <div className="card-image" style={{ padding: '2rem', display: 'flex', justifyContent: 'center' }}>
+                    <img src="/badges/github.png" alt="GitHub Badge" style={{ width: '120px', height: '120px', objectFit: 'contain' }} />
+                  </div>
+                  <div className="card-content" style={{ textAlign: 'center' }}>
+                    <span style={{ color: 'var(--accent)', fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Open Source</span>
+                    <h3 style={{ fontSize: '1.2rem', marginTop: '0.5rem' }}>Top Contributor</h3>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Recognized for significant contributions to the open source community.</p>
+                  </div>
+                </SpotlightCard>
+
+                <SpotlightCard className="card reveal" delay="0.4s">
+                  <div className="card-image" style={{ padding: '2rem', display: 'flex', justifyContent: 'center' }}>
+                    <img src="/badges/ai.png" alt="AI Badge" style={{ width: '120px', height: '120px', objectFit: 'contain' }} />
+                  </div>
+                  <div className="card-content" style={{ textAlign: 'center' }}>
+                    <span style={{ color: 'var(--accent)', fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em' }}>AI & ML</span>
+                    <h3 style={{ fontSize: '1.2rem', marginTop: '0.5rem' }}>AI Solutions Architect</h3>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>Expertise in designing and deploying AI-driven application logic.</p>
+                  </div>
+                </SpotlightCard>
+              </>
+            )}
           </div>
         </div>
       </section>
